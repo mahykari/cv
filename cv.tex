@@ -1,6 +1,6 @@
 \documentclass[11pt]{article}
 
-\usepackage[a4paper, margin=1in]{geometry}
+\usepackage[a4paper, margin=24mm]{geometry}
 \usepackage{hyperref}
 \usepackage{enumitem}
 
@@ -11,7 +11,7 @@
 
 \title{\vspace{-2.0cm} \textbf{\LARGE Curriculum Vitae}}
 \author{\Large Mahyar Karimi}
-\date{}
+\date{Last revision on \today}
 
 \begin{document}
 
@@ -19,13 +19,13 @@
 \vspace{-1.0cm}
 \section*{Contact Details}
 \begin{tabular}{p{0.1\textwidth} p{0.8\textwidth}}
-     Post &
-       Am Campus 1,
-       3400 Klosterneuburg,
-       Austria \vspace{0.25cm} \\
-     Email &
-       \href{mailto:mahyar.karimi2079@gmail.com}
-       {mahyar.karimi2079@gmail.com}
+  Post &
+    Am Campus 1,
+    3400 Klosterneuburg,
+    Austria \vspace{0.25cm} \\
+  Email &
+    \href{mailto:mahyar.karimi@ist.ac.at}
+    {mahyar.karimi@ist.ac.at}
 \end{tabular}
 
 
@@ -34,14 +34,30 @@
   2023 -- & \textbf{Ph.D. in Computer Science}, \newline
   Institute of Science and Technology,
   Klosterneuburg, Austria. \newline
-  Advisor: Prof. Thomas Henzinger
-  \newline \\
+  Advisor: Prof. Thomas Henzinger \newline
+  Research focus: runtime verification, privacy,
+  verifiable machine learning.
+  \vspace{2mm}
+  % \textbf{Notable Coursework} (full mark is 1/5): \newline
+  % \hspace*{-3mm} \begin{tabular}{
+  %   p{0.25\textwidth} p{0.05\textwidth} p{0.25\textwidth} p{0.05\textwidth}}
+  %   Formalisms in CS:     & 1.0.
+  % \end{tabular} \\
+  \\
   2018 -- \newline 2023 & 
   \textbf{B.Sc. in Computer Engineering}, \newline
   University of Tehran, Tehran, Iran. \newline
   Graduated as one of the top 10 students in my class. \newline
   Thesis advisor: \href{https://www.cs.rit.edu/~hh/}
-  {Prof. Hossein Hojjat} \\
+  {Prof. Hossein Hojjat \vspace{2mm}} \newline
+  \textbf{Notable Coursework} (full mark is 20/20): \newline 
+  \hspace*{-3mm} \begin{tabular}{
+    p{0.25\textwidth} p{0.05\textwidth} p{0.25\textwidth} p{0.05\textwidth}}
+    Software testing:      & 19.4, & Database design:        & 19.1, \\
+    Distributed systems:   & 17.8, & Cyber-physical systems: & 16.3, \\
+    Software engineering:  & 17.8, & Internet engineering:   & 18.4, \\
+    Computer architecture: & 20.0, & Operating systems:      & 19.5.
+  \end{tabular} \\
 \end{tabular}
 
 \section*{Research Experience}
@@ -50,35 +66,57 @@
   06.2023 -- \newline 09.2023 &
   \textbf{Research intern,}
   Institute of Science and Technology Austria (ISTA) \newline 
-  Working under supervision of Prof. Thomas Henzinger,
-  \newline on \emph{Learner-Verifier frameworks for dynamical 
-  systems}. \\
+  Worked under the supervision of Prof. Thomas Henzinger.
+  \vspace{2mm} \newline We studied how neural networks can act as proofs.
+  For this project, I wrote automations for
+  network training and assembling (networks of networks) using PyTorch,
+  translating networks to SymPy trees and SMT-LIB queries,
+  and passing these queries to SMT solvers
+  (Z3 as a generic and Marabou as a specialised solver).
+  I also modified Marabou to fine-tune its abstract interpreter. \\
   \\
   07.2022 -- \newline 09.2022 &
   \textbf{Research intern,} 
   Institute of Science and Technology Austria (ISTA) \newline
-  Worked under supervision of Prof. Thomas Henzinger, 
-  \newline on \emph{Monitoring fairness of decision-making 
-  processes}. \\ 
+  Worked under the supervision of Prof. Thomas Henzinger.
+  \vspace{2mm} \newline
+  We designed monitors for quantitative fairness
+  of online decision-making agents.
+  We modelled agent-environment interaction as a Markov chain.
+  I wrote a Rust prototype to generate monitors
+  and evaluate their performance. To improve space usage,
+  I also wrote a parametrised Markov chain
+  that generates states on-the-fly. \\
   \\ 
   2021 -- \newline 2023 &
   \textbf{Research assistant},
   University of Tehran \newline 
   Collaborated with
   \href{https://www.cs.rit.edu/~hh/}{Prof. Hossein Hojjat} and 
-  \href{https://www.linkedin.com/in/aseyhani/}{Amir Hossein Seyhani},
-  \newline on \emph{Causality in event structures}.
+  \href{https://www.linkedin.com/in/aseyhani/}{Amir Hossein Seyhani}.
+  \vspace{2mm} \newline We developed a model for causal reasoning
+  over concurrent systems,
+  with Winskel's \emph{event structures} as our concurrency model,
+  and the Halpern-Pearl definition of root cause.
+  We have a Python tool for causality checking,
+  with significant optimisations for verifying a candidate root cause.
 \end{tabular}
 
 \section*{Industry Experience}
 
 \begin{tabular}{p{0.1\textwidth} p{0.8\textwidth}}
-  2022--3 & \textbf{Software engineer,} Divar. \newline
-  Worked in teams
-  \emph{job finding} and \emph{platform security}. \newline
+  2022--3 & \textbf{Software engineer,} 
+  \href{https://divar.ir/about}{Divar}. \newline
+  I worked in the \emph{customer trust} team,
+  where we found ways to find and stop fraudulent users
+  by tracing their behaviour across the platform.
+  Before that, I worked in the \emph{jobs} team,
+  a new direction of the company
+  for making a job market functionality. \vspace{2mm} \newline
   Related skills:
   Microservices architecture, Django, CI/CD,
-  Scrum, Kanban \newline \\
+  Scrum, Kanban \\
+  \\
   2021 & \textbf{Infrastructure intern,}
   \href{https://tapsell.ir/en/}{Tapsell}. \newline
   Implemented a simple query caching mechanism,
@@ -95,11 +133,37 @@
     \item \vspace{-0.2cm}\textit{Advanced Programming} (Lecturer:
     \href{https://scholar.google.com/citations?user=b9ib0IYAAAAJ}
     {Prof. Ramtin Khosravi})
+
+    For this course, the TAs would work in teams for designing assignments.
+    Students would receive a review of their code
+    and oral feedback from the TA during grading. \vspace{2mm}
     \item \textit{Data Structures} (Lecturer:
     \href{https://scholar.google.co.uk/citations?user=Gr6IjigAAAAJ}
     {Prof. Fathiyeh Faghih})
-    
   \end{itemize}
+\end{tabular}
+
+\section*{Extracurricular Coursework}
+
+\begin{tabular}{p{0.1\textwidth} p{0.8\textwidth}}
+  05.2023 &
+  \href
+    {https://coursera.org/verify/DGRN45C6U8VG}
+    {\textbf{Functional Program Design in Scala}}
+    \newline
+  Lecturer: Prof. Martin Odersky (EPFL). \newline \\
+  03.2023 & 
+  \href
+    {https://coursera.org/verify/2QXCPNH6CQX2}
+    {\textbf{Functional Programming Principles in Scala}}
+    \newline
+  Lecturer: Prof. Martin Odersky (EPFL). \newline \\
+  11.2023 &
+  \href
+    {https://www.coursera.org/verify/QS3LXGCPF25Q}
+    {\textbf{Supervised Machine Learning:
+      Regression and Classification}} \newline
+  Lecturer: Prof. Andrew Ng (course offered by DeepLearning.AI).
 \end{tabular}
 
 \section*{Awards \& Honors}
@@ -108,11 +172,27 @@
   2022 & Research scholarship, granted by the Austrian 
   Agency for Education and Internationalisation
   (\href{https://oead.at/en/}{OeAD-GmbH}). \\ 
-  \\
-  2022 & Top 1\% among all applicants to the 
-  \href{https://phd.pages.ist.ac.at/isternship/}{ISTernship}* program.
-  \newline * \footnotesize{ISTA summer internship}
+  % \\
+  % 2022 & Top 1\% among all applicants to the 
+  % \href{https://phd.pages.ist.ac.at/isternship/}{ISTernship}* program.
+  % \newline * \footnotesize{ISTA summer internship}
 \end{tabular}
+
+\section*{Presentations}
+\begin{tabular}{p{0.1\textwidth} p{0.8\textwidth}}
+  09.2023 &
+  \href
+    {https://d3s.mff.cuni.cz/files/resources/avm23/Karimi_Monitoring.pdf}
+    {\textbf{Monitoring Markov Chains}} \newline
+    Presented at the 15th Alpine Verification Meeting, Prague, Czechia. \\
+    \\
+  09.2024 & 
+  \href
+    {https://avm2024.informatik.uni-freiburg.de/assets/presentations/mahyar_karimi.pdf}
+    {\textbf{Monitors, Systems, and Privacy}} \newline
+    Presented at the 16th Alpine Verification Meeting, Freiburg, Germany. \\
+\end{tabular}
+
 
 \section*{Publications}
 
