@@ -3,6 +3,19 @@
 \usepackage[a4paper, margin=24mm]{geometry}
 \usepackage{hyperref}
 \usepackage{enumitem}
+\usepackage{longtable}
+
+\usepackage[sorting=ydnt, style=numeric, defernumbers=true]{biblatex}
+\addbibresource{publications.bib}
+\DeclareSourcemap{
+  \maps[datatype=bibtex]{
+    \map{
+      \step[fieldsource=doi, final]
+      \step[fieldset=url, null]
+      \step[fieldset=urldate, null]
+    }
+  }
+}
 
 \hypersetup{
   colorlinks=true, 
@@ -25,18 +38,19 @@
     Austria \vspace{0.25cm} \\
   Email &
     \href{mailto:mahyar.karimi@ist.ac.at}
-    {mahyar.karimi@ist.ac.at}
+    {mahyar.karimi@ist.ac.at} \vspace{0.25cm} \\
+  ORCID &
+    \href{https://orcid.org/0009-0005-0820-1696}
+    {0009-0005-0820-1696}
 \end{tabular}
 
-
 \section*{Education}
-\begin{tabular}{p{0.1\textwidth} p{0.8\textwidth}}
-  2023 -- & \textbf{Ph.D. in Computer Science}, \newline
+\begin{longtable}{p{0.1\textwidth} p{0.8\textwidth}}
+  2023 -- \newline 2026 & \textbf{M.Sc. in Computer Science}, \newline
   Institute of Science and Technology,
   Klosterneuburg, Austria. \newline
   Advisor: Prof. Thomas Henzinger \newline
-  Research focus: runtime verification, privacy,
-  verifiable machine learning.
+  Expected date of graduation: March 31, 2026
   \vspace{2mm}
   % \textbf{Notable Coursework} (full mark is 1/5): \newline
   % \hspace*{-3mm} \begin{tabular}{
@@ -58,11 +72,11 @@
     Software engineering:  & 17.8, & Internet engineering:   & 18.4, \\
     Computer architecture: & 20.0, & Operating systems:      & 19.5.
   \end{tabular} \\
-\end{tabular}
+\end{longtable}
 
 \section*{Research Experience}
 
-\begin{tabular}{p{0.1\textwidth} p{0.8\textwidth}}
+\begin{longtable}{p{0.1\textwidth} p{0.8\textwidth}}
   06.2023 -- \newline 09.2023 &
   \textbf{Research intern,}
   Institute of Science and Technology Austria (ISTA) \newline 
@@ -100,7 +114,7 @@
   and the Halpern-Pearl definition of root cause.
   We have a Python tool for causality checking,
   with significant optimisations for verifying a candidate root cause.
-\end{tabular}
+\end{longtable}
 
 \section*{Industry Experience}
 
@@ -193,16 +207,22 @@
     Presented at the 16th Alpine Verification Meeting, Freiburg, Germany. \\
 \end{tabular}
 
+\section*{Academic Service}
+
+\begin{tabular}{p{0.1\textwidth} p{0.8\textwidth}}
+  2025 & \textbf{Artifact evaluation committee member,}
+  CAV 2025
+  (International Conference on Computer Aided Verification). \\
+  \\
+  2025 & \textbf{Subreviewer,}
+  ECAI 2025 (European Conference on Artificial Intelligence)
+  and FMCAD 2025 (Formal Methods in Computer-Aided Design).
+\end{tabular}
 
 \section*{Publications}
 
 \subsection*{Refereed Conference Papers}
-
-\begingroup
-\renewcommand{\section}[2]{}
 \nocite{*}
-\bibliographystyle{plain}
-\bibliography{publications}
-\endgroup
+\printbibliography[heading=none, type=inproceedings]
 
 \end{document}
